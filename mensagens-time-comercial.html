@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mensagens prontas · Time comercial · Convite Dia das Mães · All Life Institute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F8F7F3;
+  --paper-warm:#F1ECE0;
+  --black:#333333;
+  --terracota:#B46A55;
+  --terracota-deep:#8C4E3F;
+  --terracota-soft:#D4A693;
+  --dark-green:#585C3B;
+  --nature-green:#899064;
+  --brown:#BF9474;
+  --text:var(--black);
+  --text-soft:#525252;
+  --text-faint:#7C7C7C;
+  --text-on-dark:rgba(248,247,243,.92);
+  --text-on-terra:#FCF8F4;
+  --line:rgba(51,51,51,.12);
+  --f:'Lora',Georgia,serif;
+  --f-display:'DM Sans',system-ui,-apple-system,sans-serif;
+  --f-mono:'DM Sans','SF Mono',ui-monospace,monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);background:var(--paper-warm);color:var(--text);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--terracota-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:800;letter-spacing:-.018em}
+
+.eyebrow{font-family:var(--f-mono);font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-faint)}
+
+.doc{max-width:980px;margin:0 auto;padding:60px 32px 120px}
+
+/* ============= HEADER ============= */
+.doc-header{padding-bottom:50px;margin-bottom:50px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.doc-header h1{font-size:clamp(36px,4vw,56px);line-height:1.05;color:var(--text);margin-top:14px;max-width:18ch}
+.doc-header .lbl{font-size:13px;color:var(--text-faint)}
+.doc-header .meta{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-soft);text-align:right;line-height:1.7}
+.doc-header .meta strong{color:var(--text);display:block}
+
+/* ============= REGRAS DE OURO ============= */
+.regras{background:var(--dark-green);color:var(--text-on-dark);padding:40px 40px;border-radius:6px;margin-bottom:50px}
+.regras .eyebrow{color:rgba(248,247,243,.55)}
+.regras h2{font-size:22px;color:var(--text-on-dark);margin-top:8px;margin-bottom:16px}
+.regras ol{padding-left:20px;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+.regras li{font-size:14px;line-height:1.6}
+.regras li strong{color:var(--text-on-dark);font-weight:700}
+
+/* ============= TÉCNICAS DE VENDAS ============= */
+.tecnicas{background:var(--paper);border:1px solid var(--line);padding:32px 36px;border-radius:6px;margin-bottom:50px}
+.tecnicas h2{font-size:22px;margin-bottom:8px;color:var(--text)}
+.tecnicas .desc{font-size:13.5px;color:var(--text-soft);margin-bottom:22px;line-height:1.6}
+.tecnicas .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tecnicas .it{background:var(--paper-warm);padding:18px 18px;display:flex;flex-direction:column;gap:6px}
+.tecnicas .it .num{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;color:var(--terracota-deep);text-transform:uppercase;font-weight:500}
+.tecnicas .it h4{font-size:14.5px;color:var(--text);font-family:var(--f-display);text-transform:none;letter-spacing:0}
+.tecnicas .it p{font-size:12px;color:var(--text-soft);line-height:1.5}
+
+/* ============= TABELA · QUEM CHAMA ============= */
+.tabela-quem{margin-bottom:50px}
+.tabela-quem h2{font-size:24px;margin-bottom:18px;color:var(--text)}
+.tabela-quem table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line)}
+.tabela-quem th{background:var(--paper-warm);padding:12px 16px;text-align:left;font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--text-faint);font-weight:500;border-bottom:1px solid var(--line)}
+.tabela-quem td{padding:14px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.tabela-quem td:first-child{font-weight:500}
+
+/* ============= MENSAGEM CARD ============= */
+.msg{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:36px 36px;margin-bottom:24px;position:relative}
+.msg-hoje{border-left:4px solid var(--terracota)}
+.msg-amanha{border-left:4px solid var(--dark-green)}
+.msg-recuperacao{border-left:4px solid var(--brown)}
+.msg-followup{border-left:4px solid var(--nature-green)}
+.msg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.msg-head .l h3{font-size:24px;color:var(--text);margin-top:6px;line-height:1.15}
+.msg-head .l .num-tag{display:inline-block;font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;background:var(--terracota);color:var(--text-on-terra);padding:4px 10px;border-radius:3px;font-weight:500}
+.msg-amanha .num-tag{background:var(--dark-green)}
+.msg-recuperacao .num-tag{background:var(--brown);color:var(--text)}
+.msg-followup .num-tag{background:var(--nature-green);color:var(--text-on-dark)}
+.msg-head .r{font-family:var(--f-mono);font-size:11px;color:var(--text-soft);text-align:right;letter-spacing:.06em;text-transform:uppercase;line-height:1.7;flex-shrink:0}
+.msg-head .r strong{color:var(--text);display:block;font-weight:700}
+.msg-info{background:var(--paper-warm);padding:14px 18px;font-size:13px;color:var(--text-soft);margin-bottom:18px;border-radius:3px;line-height:1.6}
+.msg-info strong{color:var(--text);font-weight:500}
+
+/* Card preview link */
+.img-link{display:inline-flex;align-items:center;gap:6px;background:var(--terracota);color:var(--text-on-terra)!important;padding:5px 10px;border-radius:3px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;text-decoration:none;margin:0 2px}
+.img-link:hover{background:var(--terracota-deep);text-decoration:none}
+
+.tecnica-tag{display:inline-block;background:var(--paper-warm);color:var(--terracota-deep);padding:3px 8px;border-radius:3px;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;margin-left:6px;border:1px solid var(--terracota-soft)}
+
+.msg-body{position:relative;background:var(--paper-warm);padding:24px 28px;border-radius:6px;font-family:var(--f);font-size:15px;line-height:1.65;color:var(--text);margin-bottom:18px}
+.msg-body p{margin-bottom:14px}
+.msg-body p:last-child{margin-bottom:0}
+
+.btn-copy{position:absolute;top:14px;right:14px;background:var(--terracota);color:var(--text-on-terra);border:none;padding:8px 14px;font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border-radius:3px;transition:background .2s ease;font-weight:500}
+.btn-copy:hover{background:var(--terracota-deep)}
+.btn-copy.copied{background:var(--dark-green)}
+
+/* ============= CHEAT SHEET ============= */
+.cheat{margin:60px 0 50px;background:var(--paper);border:1px solid var(--line);padding:36px 36px;border-radius:6px}
+.cheat h2{font-size:24px;color:var(--text);margin-bottom:8px}
+.cheat .desc{font-size:13.5px;color:var(--text-soft);margin-bottom:20px;line-height:1.6}
+.cheat table{width:100%;border-collapse:collapse}
+.cheat th{padding:10px 12px;text-align:left;font-family:var(--f-mono);font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--text-faint);font-weight:500;border-bottom:1px solid var(--line)}
+.cheat td{padding:14px 12px;border-bottom:1px solid var(--line);font-size:13.5px;line-height:1.5;vertical-align:top}
+.cheat td:first-child{color:var(--text)}
+.cheat td:last-child{font-family:var(--f-mono);font-size:12px;font-weight:500;color:var(--terracota-deep);letter-spacing:.04em}
+.cheat td a{color:var(--terracota-deep);text-decoration:underline}
+
+/* ============= TEMPLATES ============= */
+.templates{margin:60px 0 50px}
+.templates h2{font-size:24px;margin-bottom:18px}
+.template-item{background:var(--paper);border:1px solid var(--line);padding:24px 28px;margin-bottom:6px;position:relative;border-radius:3px}
+.template-item .label{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracota-deep);font-weight:500;margin-bottom:8px}
+.template-item .text{font-family:var(--f);font-size:14px;line-height:1.65;color:var(--text);padding-right:80px}
+.template-item .btn-copy{position:absolute;top:18px;right:18px;font-size:10px;padding:6px 10px}
+
+/* ============= CHECKLIST ============= */
+.checklist{margin:60px 0 50px;background:var(--paper);border:1px solid var(--line);padding:36px 36px;border-radius:6px}
+.checklist h2{font-size:24px;margin-bottom:8px}
+.checklist .desc{font-size:13.5px;color:var(--text-soft);margin-bottom:24px;line-height:1.6}
+.checklist .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.checklist .col h3{font-size:14px;color:var(--terracota-deep);margin-bottom:12px;font-family:var(--f-mono);text-transform:uppercase;letter-spacing:.14em;font-weight:500}
+.checklist ul{list-style:none;padding:0;margin:0}
+.checklist li{padding:8px 0;border-bottom:1px dashed var(--line);font-size:13px;color:var(--text-soft);line-height:1.5;display:flex;gap:8px;align-items:flex-start}
+.checklist li::before{content:"";flex-shrink:0;width:12px;height:12px;border:1px solid var(--line);margin-top:4px;background:var(--paper)}
+
+/* ============= NÃO FAZER ============= */
+.dont{background:#FFF8F4;border:1px solid var(--terracota-soft);padding:32px 32px;border-radius:6px;margin:60px 0 50px}
+.dont h2{font-size:22px;color:var(--terracota-deep);margin-bottom:14px}
+.dont ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 24px}
+.dont li{font-size:13.5px;line-height:1.6;color:var(--text);padding-left:20px;position:relative}
+.dont li::before{content:"✕";position:absolute;left:0;top:2px;color:var(--terracota);font-weight:700}
+
+/* ============= FOOTER ============= */
+.foot{margin-top:80px;padding-top:32px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-faint);display:flex;justify-content:space-between;align-items:center;gap:24px}
+.foot a{color:var(--terracota-deep)}
+
+@media (max-width:760px){
+  .doc{padding:40px 18px}
+  .doc-header{grid-template-columns:1fr;gap:14px}
+  .doc-header .meta{text-align:left}
+  .regras ol{grid-template-columns:1fr}
+  .tecnicas .grid{grid-template-columns:1fr}
+  .msg{padding:24px 22px}
+  .msg-head{flex-direction:column;gap:8px}
+  .msg-head .r{text-align:left}
+  .checklist .grid{grid-template-columns:1fr;gap:24px}
+  .dont ul{grid-template-columns:1fr}
+  .template-item .text{padding-right:0;margin-top:38px}
+  .template-item .btn-copy{top:18px;right:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <div>
+      <p class="lbl">Time comercial · Convite Dia das Mães · Maio 2026</p>
+      <h1>Mensagens prontas pra você usar</h1>
+    </div>
+    <div class="meta">
+      <strong>Janela</strong>
+      07 a 13 Mai 2026<br>
+      Atacama Digital × ALI
+    </div>
+  </header>
+
+  <!-- REGRAS DE OURO -->
+  <section class="regras">
+    <p class="eyebrow">Antes de começar</p>
+    <h2>Cinco regras que valem pra todas as mensagens</h2>
+    <ol>
+      <li><strong>Sempre 1:1.</strong> Nunca lista de transmissão.</li>
+      <li><strong>Sempre o nome.</strong> Nunca "querida", "amor", "linda".</li>
+      <li><strong>Pergunta antes de propor.</strong> Quer saber da mãe antes de mandar os kits.</li>
+      <li><strong>Sem travessão.</strong> Vírgula, ponto ou reescreve.</li>
+      <li><strong>CTA é a conversa.</strong> Não fecha venda no primeiro toque.</li>
+    </ol>
+  </section>
+
+  <!-- TÉCNICAS DE VENDAS APLICADAS -->
+  <section class="tecnicas">
+    <h2>Técnicas de vendas aplicadas nessas mensagens</h2>
+    <p class="desc">Cada copy abaixo carrega gatilhos sutis pra aumentar a conversão sem quebrar o tom institucional. Identifique os blocos pelas tags <span class="tecnica-tag">técnica</span> nas mensagens.</p>
+    <div class="grid">
+      <div class="it">
+        <p class="num">01 · exclusividade</p>
+        <h4>"Quis te escrever pessoalmente"</h4>
+        <p>Faz a paciente sentir que recebeu acesso antes do público geral.</p>
+      </div>
+      <div class="it">
+        <p class="num">02 · reciprocidade</p>
+        <h4>"Você é uma das que mais cuida aqui"</h4>
+        <p>Reconhece a relação de longa data, abre espaço pra retribuir.</p>
+      </div>
+      <div class="it">
+        <p class="num">03 · pergunta investigativa</p>
+        <h4>"O que sua mãe mais reclama?"</h4>
+        <p>Ativa a paciente como decisora e qualifica o caminho certo.</p>
+      </div>
+      <div class="it">
+        <p class="num">04 · visualização</p>
+        <h4>"Imagina sua mãe sendo recebida..."</h4>
+        <p>Cria a cena emocional antes do preço aparecer.</p>
+      </div>
+      <div class="it">
+        <p class="num">05 · prova social</p>
+        <h4>"Outras pacientes já estão escolhendo"</h4>
+        <p>Cita o movimento sem nomes, gera senso de comunidade.</p>
+      </div>
+      <div class="it">
+        <p class="num">06 · âncora de urgência leve</p>
+        <h4>"Janela de 120 dias começa quando você entrega"</h4>
+        <p>Tira a urgência de domingo mas reforça que tem prazo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM CHAMA QUEM -->
+  <section class="tabela-quem">
+    <h2>Quem chama quem, e quando</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Lista</th>
+          <th>Quem dispara</th>
+          <th>Quando</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Top 30 da base ativa (pacientes mais próximas)</td><td>Fran</td><td>Hoje, 07 Mai</td></tr>
+        <tr><td>Restante da base ativa</td><td>Fran + Dayanne dividindo</td><td>08 Mai</td></tr>
+        <tr><td>Quem abriu e não respondeu</td><td>Fran</td><td>10 Mai (domingo)</td></tr>
+        <tr><td>Quem ainda não respondeu</td><td>Fran</td><td>12 e 13 Mai</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- MENSAGEM 01 · HOJE -->
+  <article class="msg msg-hoje">
+    <div class="msg-head">
+      <div class="l">
+        <span class="num-tag">01 · hoje</span>
+        <h3>1º contato · Quinta · 07 Mai</h3>
+      </div>
+      <div class="r"><strong>Para</strong>Top 30 da base<br><strong>Disparar</strong>9h às 17h</div>
+    </div>
+    <p class="msg-info"><strong>Como enviar:</strong> mande primeiro o <a href="./imagens/card-capa-wpp-ig.png" target="_blank" class="img-link">↗ card capa 1080×1350</a>, depois o texto abaixo. <strong>Se ela responder positivo:</strong> manda os <a href="./imagens/kit-01.png" target="_blank" class="img-link">↗ kit 01</a> <a href="./imagens/kit-02.png" target="_blank" class="img-link">↗ kit 02</a> <a href="./imagens/kit-03.png" target="_blank" class="img-link">↗ kit 03</a> e pergunta sobre a mãe (mensagem 02 do <a href="./index.html#whatsapp" target="_blank">master</a>).</p>
+    <div class="msg-body">
+      <button class="btn-copy" data-target="msg-01">Copiar</button>
+      <div id="msg-01">
+        <p>Oi [NOME], é a Fran do All Life 🤍</p>
+        <p>Quis te escrever pessoalmente, antes de qualquer outra paciente, porque você é uma das mulheres que mais cuida aqui dentro. E o Instituto abriu um convite especial esse mês, pensado em quem entende o valor de receber esse cuidado.</p>
+        <p>A ideia é a seguinte: você escolhe um caminho de cuidado pra presentear sua mãe, entre os kits curados pela equipe, a gente customiza o seu gift card com a mensagem que você quiser, e ela agenda no melhor momento dela, dentro de 120 dias.</p>
+        <p>Posso te apresentar os caminhos? São três principais, e eu prometo que te respondo em 5 minutos.</p>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- MENSAGEM 02 · AMANHÃ -->
+  <article class="msg msg-amanha">
+    <div class="msg-head">
+      <div class="l">
+        <span class="num-tag">02 · amanhã</span>
+        <h3>2º toque · Sexta · 08 Mai</h3>
+      </div>
+      <div class="r"><strong>Para</strong>Quem viu sem responder<br><strong>Disparar</strong>10h às 16h</div>
+    </div>
+    <p class="msg-info"><strong>Como enviar:</strong> só texto, sem reanexar a capa. <strong>Se ela responder com queixa da mãe</strong>, vai direto pra cheat sheet abaixo e manda 1 ou 2 cards específicos (não os 3 genéricos). Aplica <span class="tecnica-tag">pergunta investigativa</span>.</p>
+    <div class="msg-body">
+      <button class="btn-copy" data-target="msg-02">Copiar</button>
+      <div id="msg-02">
+        <p>Oi [NOME], é a Fran de novo 🤍</p>
+        <p>Sei que talvez você tenha visto rápido ontem entre uma reunião e outra. Quis voltar aqui porque algumas pacientes já começaram a escolher os caminhos, e eu não queria que você ficasse de fora antes da gente conversar.</p>
+        <p>Antes de te mandar os kits, posso te perguntar uma coisa? O que sua mãe mais reclama do corpo dela hoje? Algo que ela carrega há tempo, ou que apareceu mais forte ultimamente?</p>
+        <p>Com essa resposta, eu te mando o caminho que mais combina, em vez de te encher de opção genérica.</p>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- MENSAGEM 03 · RECUPERAÇÃO -->
+  <article class="msg msg-recuperacao">
+    <div class="msg-head">
+      <div class="l">
+        <span class="num-tag">03 · recuperação</span>
+        <h3>"Ainda dá tempo" · Domingo · 10 Mai</h3>
+      </div>
+      <div class="r"><strong>Para</strong>Quem não respondeu nada<br><strong>Disparar</strong>9h às 11h</div>
+    </div>
+    <p class="msg-info"><strong>Como enviar:</strong> só texto. Aplica <span class="tecnica-tag">âncora de urgência leve</span> + <span class="tecnica-tag">prova social</span>. Não insistir depois disso. Aguardar 2 dias para o follow-up final.</p>
+    <div class="msg-body">
+      <button class="btn-copy" data-target="msg-03">Copiar</button>
+      <div id="msg-03">
+        <p>[NOME], passando aqui rapidinho. Hoje é Dia das Mães, mas o convite que mandei não tem prazo de domingo.</p>
+        <p>A janela é de 120 dias depois de você entregar o presente à sua mãe, então pode ser usado até setembro. E a maior parte das pacientes que escolheu até agora preferiu deixar pra entregar com calma, não no rush.</p>
+        <p>Se quiser conversar amanhã, ou semana que vem, eu estou por aqui. A gente desenha o cuidado certo no seu tempo. 🤍</p>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- MENSAGEM 04 · FOLLOW-UP FINAL -->
+  <article class="msg msg-followup">
+    <div class="msg-head">
+      <div class="l">
+        <span class="num-tag">04 · follow-up</span>
+        <h3>Porta aberta · 12 e 13 Mai (D+5)</h3>
+      </div>
+      <div class="r"><strong>Para</strong>Quem ainda não respondeu<br><strong>Depois disso</strong>arquivar</div>
+    </div>
+    <p class="msg-info"><strong>Como enviar:</strong> só texto, mensagem leve sem cobrança. Aplica <span class="tecnica-tag">reciprocidade</span> + porta aberta. Após o disparo, anotar no CRM Kommo o status "sem resposta · arquivar follow-up".</p>
+    <div class="msg-body">
+      <button class="btn-copy" data-target="msg-04">Copiar</button>
+      <div id="msg-04">
+        <p>Oi [NOME], é a Fran. Sem cobrança nenhuma, só passei pra deixar uma porta aberta.</p>
+        <p>Os caminhos que eu te mostrei seguem disponíveis até o fim do mês. Depois disso, a comunicação dessa edição encerra, mas você pode pedir os procedimentos avulsos a qualquer momento.</p>
+        <p>Se em algum momento essa ideia fizer sentido pra sua mãe, basta dar um oi por aqui. Beijo. 🤍</p>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- CHEAT SHEET -->
+  <section class="cheat">
+    <h2>Cheat sheet · Roteamento por queixa da mãe</h2>
+    <p class="desc">Quando a paciente conta o que a mãe carrega, use a tabela pra mandar o card mais específico em vez dos 3 kits genéricos. Cada link abre a imagem em alta.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>O que a paciente conta da mãe</th>
+          <th>Mandar primeiro</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dor crônica, ombro/costas, insônia, ansiedade</td>
+          <td><a href="./imagens/kit-01.png" target="_blank">↗ kit 01</a> · terapia neural + miofascial</td>
+        </tr>
+        <tr>
+          <td>Cansaço, ganho de peso, alimentação desregulada</td>
+          <td><a href="./imagens/kit-02.png" target="_blank">↗ kit 02</a> · nutricional + miofascial</td>
+        </tr>
+        <tr>
+          <td>Estética, espelho, autoestima, pele</td>
+          <td><a href="./imagens/kit-03.png" target="_blank">↗ kit 03</a> · botox + sculptra + skin booster</td>
+        </tr>
+        <tr>
+          <td>Climatério, sono, humor, calorão</td>
+          <td>jornadas nutricionais (kits 04 ou 05) + sugerir conversa com Theo</td>
+        </tr>
+        <tr>
+          <td>Cuidado íntimo, ressecamento, infecção urinária</td>
+          <td>kits 06 e 07 · em conversa privada · agendar consulta</td>
+        </tr>
+        <tr>
+          <td>Sem queixa específica · paciente quer presente customizado</td>
+          <td>
+            <a href="./imagens/avulso-terapia-neural.png" target="_blank">↗ neural</a> ·
+            <a href="./imagens/avulso-miofascial.png" target="_blank">↗ miofascial</a> ·
+            <a href="./imagens/avulso-massagem.png" target="_blank">↗ massagem</a> ·
+            <a href="./imagens/avulso-capilar.png" target="_blank">↗ capilar</a> ·
+            <a href="./imagens/avulso-nutricional.png" target="_blank">↗ nutricional</a> ·
+            <a href="./imagens/avulso-constelacao.png" target="_blank">↗ constelação</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <!-- TEMPLATES -->
+  <section class="templates">
+    <h2>Templates de resposta rápida</h2>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-1">Copiar</button>
+      <p class="label">Pergunta de valor antes de qualificar · <span class="tecnica-tag">qualificação</span></p>
+      <p class="text" id="t-1">O valor varia entre R$ [MIN] e R$ [MAX], depende muito do caminho que faz mais sentido pra sua mãe. Antes de te passar a cotação certa, posso te perguntar o que ela carrega há mais tempo? Aí eu te mando o valor exato do que vai realmente fazer diferença, não uma tabela genérica.</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-2">Copiar</button>
+      <p class="label">"Minha mãe nunca veio aí" · <span class="tecnica-tag">redução de fricção</span></p>
+      <p class="text" id="t-2">Pode sim, e é exatamente o que está acontecendo com a maior parte dos convites: filhas trazendo mães que nunca vieram. A primeira etapa é uma avaliação clínica gratuita com a equipe, antes de qualquer procedimento. Ela vai ser recebida com a mesma escuta que você já conhece daqui. 🤍</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-3">Copiar</button>
+      <p class="label">"Posso parcelar?" · <span class="tecnica-tag">facilitação</span></p>
+      <p class="text" id="t-3">Pode. A gente parcela em até [X] vezes no cartão, sem juros nas primeiras parcelas. Pra valores acima de [Y], a gente conversa sobre as opções com mais detalhes pra encaixar no seu orçamento.</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-4">Copiar</button>
+      <p class="label">"Posso trocar o kit depois?" · <span class="tecnica-tag">redução de risco</span></p>
+      <p class="text" id="t-4">Pode. Se na avaliação a equipe perceber que faz mais sentido outro caminho, a gente troca pelo equivalente. Sem reembolso em dinheiro, mas com flexibilidade total pra desenhar o que melhor cabe. A escolha é sua, a leitura é da equipe.</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-5">Copiar</button>
+      <p class="label">"Tem que ser usado até domingo?" · <span class="tecnica-tag">desfaz urgência negativa</span></p>
+      <p class="text" id="t-5">Não. A janela é de 120 dias contados a partir da entrega do convite à sua mãe. Pode ser usado até o início de setembro, dependendo de quando ela receber. Bom presente é o que cabe na agenda dela, não na pressa do calendário.</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-6">Copiar</button>
+      <p class="label">"E se ela não quiser ir?" · <span class="tecnica-tag">empatia + plano B</span></p>
+      <p class="text" id="t-6">A gente entende. Acontece com mães que aprenderam a recusar cuidado, é parte do que esse convite quer atravessar com calma. Você pode segurar e oferecer de novo daqui a um mês, dois, três. Ou converter pra você mesma, se preferir. O importante é que o cuidado encontre quem está pronta.</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-7">Copiar</button>
+      <p class="label">"Tem cartão impresso?" · <span class="tecnica-tag">elevação do gesto</span></p>
+      <p class="text" id="t-7">Tem, e é a forma que tem mais alma pra entregar. A gente prepara um cartão impresso em papel do Instituto (Materica Terracota) com o nome da sua mãe e a sua mensagem manuscrita pela equipe, e envia pra você ou direto pra ela. Tem uma taxa pequena de entrega e demora cerca de três dias úteis pra preparar.</p>
+    </div>
+
+    <div class="template-item">
+      <button class="btn-copy" data-target="t-8">Copiar</button>
+      <p class="label">Fechamento de objeção genérica · <span class="tecnica-tag">retorno ao motivo</span></p>
+      <p class="text" id="t-8">Entendo, [NOME]. Sem nenhuma pressão da minha parte. Só quero te lembrar do que te trouxe até aqui: você cuida muito bem de si, e sua mãe vai ser recebida com a mesma escuta. Quando fizer sentido pra você, é só me dar um oi. Estou aqui. 🤍</p>
+    </div>
+  </section>
+
+
+  <!-- CHECKLIST OPERACIONAL -->
+  <section class="checklist">
+    <h2>Checklist operacional</h2>
+    <p class="desc">Sequência completa pro time. Imprime e tem à mão durante a operação.</p>
+    <div class="grid">
+
+      <div class="col">
+        <h3>Antes de disparar</h3>
+        <ul>
+          <li>Tabela de preços atualizada à mão (3 kits + jornadas + cuidado íntimo)</li>
+          <li>Cards salvos no celular ou desktop pra mandar rápido</li>
+          <li>CRM Kommo aberto pra anotar cada conversa</li>
+          <li>Templates de resposta abertos numa aba</li>
+          <li>Lista nominal pronta (sem números repetidos)</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>Durante o disparo</h3>
+        <ul>
+          <li>Disparar em ondas, máximo 10 contatos por hora</li>
+          <li>Personalizar [NOME] antes de enviar</li>
+          <li>Mandar card capa antes do texto (ordem importa)</li>
+          <li>Aguardar 24h antes do segundo toque</li>
+          <li>Anotar no CRM Kommo o status de cada conversa</li>
+          <li>Escutar o "como" da resposta, não só o "sim/não"</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>Depois de cada conversa</h3>
+        <ul>
+          <li>Marcar status no Kommo (enviado, em conversa, fechado, recusou, sem resposta)</li>
+          <li>Se fechado, passar pra equipe operacional preparar o gift card</li>
+          <li>Se cuidado íntimo (kits 06 e 07), agendar consulta privada</li>
+          <li>Pergunta clínica profunda, encaminhar pro Dr. Theo Webert</li>
+          <li>Mãe com restrição grave, marcar avaliação prévia primeiro</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- NÃO FAZER -->
+  <section class="dont">
+    <h2>O que NÃO fazer</h2>
+    <ul>
+      <li>Usar "querida", "amor", "linda" na chamada</li>
+      <li>Usar lista de transmissão</li>
+      <li>Pressionar paciente que sumiu</li>
+      <li>Usar travessão na mensagem</li>
+      <li>Responder valor sem qualificar a queixa primeiro</li>
+      <li>Fechar venda de cuidado íntimo por mensagem</li>
+      <li>Mandar os 3 kits genéricos quando a paciente já deu pista da queixa</li>
+      <li>Insistir mais de 4 toques na mesma paciente</li>
+    </ul>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div>
+      Convite Dia das Mães · All Life Institute
+    </div>
+    <div>
+      <a href="./index.html">← voltar pro master</a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+document.querySelectorAll('.btn-copy').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = document.getElementById(btn.dataset.target);
+    if (!target) return;
+    const text = target.innerText.trim();
+    navigator.clipboard.writeText(text).then(() => {
+      const original = btn.textContent;
+      btn.textContent = 'Copiado ✓';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('copied');
+      }, 1800);
+    }).catch(err => {
+      btn.textContent = 'Erro';
+      setTimeout(() => { btn.textContent = 'Copiar'; }, 1800);
+    });
+  });
+});
+</script>
+
+</body>
+</html>
